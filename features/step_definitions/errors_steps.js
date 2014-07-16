@@ -1,7 +1,7 @@
 // features/step_definitions/errors_steps.js
 
-var errorsWrapper = function () {
-	this.Calculator = require('http://thinkthroughmath.github.io/javascript-calculator/javascript-calculator.js').Calculator;
+module.exports = function () {
+	this.Calculator = require(process.cwd() + '/javascript-calculator/dist/javascript-calculator.js').Calculator;
 	
 	// Scenario: NaN Math
 	this.Given(/^I have entered (\d+)$/, function (arg1, callback) {
